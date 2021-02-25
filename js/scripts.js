@@ -48,11 +48,11 @@ $.getJSON('./data/crashes.json',function(crashrow) { //$.getJSON('where the data
     console.log(crashrow.name, crashrow.pizzashop)
 
     var html = `
-      <h2>${crashrow.NUMBERxOFxCYCLISTxINJURED} Cyclists Injured</h3>
       <h4>Cause of Crash:</h4>
-        <div>${crashrow.CONTRIBUTINGxFACTORxVEHICLEx1}</div>
-      <h4>Vehicle involved:</h4>
-        <div> ${crashrow.VEHICLExTYPExCODEx1}</i></div>
+        <h2><div>${crashrow.CONTRIBUTINGxFACTORxVEHICLEx1}</div></h2>
+      <h4>Vehicle Involved:</h4>
+        <h2><div> ${crashrow.VEHICLExTYPExCODEx1}</i></div></h2>
+      <h4>${crashrow.CRASHxDATE} at ${crashrow.CRASHxTIME}</h4>
       `
 
       var color = 'Red'
